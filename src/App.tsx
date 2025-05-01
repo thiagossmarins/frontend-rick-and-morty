@@ -1,10 +1,10 @@
 import './index.css'
+import Home from './pages/Home'
 
 export default function App() {
-
   return (
-    <div>
-      <h1>Hello Wolrd</h1>
-    </div>
+    <>
+      <Home />
+    </>
   )
 }
