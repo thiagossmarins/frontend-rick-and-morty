@@ -1,14 +1,14 @@
-import './index.css'
+import { Container } from './style'
 import logoRickAndMorty from "../../assets/img/logo-rick-and-morty.png"
 
 export function Header() {
   return (
-    <header>
+    <Container>
         <img 
           src={logoRickAndMorty} 
           alt="Rick And Morty Logo" 
           className='logo-rick-and-morty'
         />
-    </header>
+    </Container>
   )
 }

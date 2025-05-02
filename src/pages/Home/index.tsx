@@ -1,23 +1,23 @@
+import { BackgroundImage, Content } from './style'
 import { Header } from '../../components/Header'
 import { Search } from '../../components/Search'
 import background from '../../assets/img/background-rick-and-morty.png'
-import './index.css'
+import { Cards } from '../../components/Cards';
 
 export default function App() {
+
   return (
     <>
-      <div className='background'>
-        <img 
-          src={background}
-          alt='Background Rick And Morty'
-        />
-      </div>
+      <BackgroundImage
+        src={background}
+        alt='Background Rick And Morty'
+      />
 
-      <div className='content'>
+      <Content>
         <Header />
-
         <Search />
-      </div>
+        <Cards />
+      </Content>
     </>
   )
 }
