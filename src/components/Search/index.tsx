@@ -1,8 +1,8 @@
-import './index.css'
+import { SearchBtns } from './style'
 
 export function Search() {
   return (
-    <div className='search'>
+    <SearchBtns>
         <input
           type="text"
           placeholder='Search characters' 
@@ -10,6 +10,6 @@ export function Search() {
         <button type='submit'>
           Search
         </button>
-    </div>
+    </SearchBtns>
   )
 }
