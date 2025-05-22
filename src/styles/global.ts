@@ -26,8 +26,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     background-image: url(${background});
     background-color: var(--color-primary);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
   }
 `;
