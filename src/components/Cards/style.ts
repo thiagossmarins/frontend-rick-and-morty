@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface CharactersStatus {
+  status: string;
+}
+
 export const Container = styled.div`
   max-width: 65%;
   
@@ -8,7 +12,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   gap: 25px;
 
-  padding-top: 120px;
+  padding-top: 120px
 `;
 
 export const Card = styled.div`
@@ -31,7 +35,7 @@ export const Card = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const Image = styled.img<CharactersStatus>`
   position: absolute;
   
   width: 100%;
@@ -40,6 +44,8 @@ export const Image = styled.img`
   object-fit: cover;
   overflow: hidden;
   z-index: -1;
+
+  filter: ${({ status }) => status === "Dead" ? "grayscale(1)" : "none"};
 `;
 
 export const Text = styled.div`

@@ -1,6 +1,7 @@
 import { Content } from './style'
 import { Header } from '../../components/Header'
 import { Search } from '../../components/Search'
+import { Cards } from '../../components/Cards'
 
 export function Characters() {
 
@@ -8,6 +9,7 @@ export function Characters() {
     <Content>
       <Header />
       <Search />
+      <Cards />
     </Content>
   )
 }
