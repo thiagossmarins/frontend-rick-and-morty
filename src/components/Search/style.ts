@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-export const SearchBtns = styled.div `
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const Center = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 75px;
+`
 
-  gap: 16px;
-  margin-top: 74px;
-
-  & input{
+export const SearchInput = styled.input`
     background-color: transparent;
-    color: #9F9F9F;
+    color: #fff;
     
     border: 2px solid #fff;
     border-radius: 8px;
@@ -23,26 +23,13 @@ export const SearchBtns = styled.div `
     padding: 10px 0px 10px 10px;
     
     &:focus {
-      color: #9F9F9F;
+      color: #fff;
   
       border: 2px solid #fff;
       outline: none;
     }
-  }
 
-  & button {
-
-    background-color: transparent;
-    color: #fff;
-    
-    border: 2px solid #fff;
-    border-radius: 8px;
-    
-    text-align: center;
-    
-    font-size: 16px;
-    font-weight: 700;
-    
-    padding: 10px;
-  }
+    &::placeholder {
+      color: #fff;
+    }
 `
