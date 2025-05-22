@@ -18,8 +18,8 @@ export const Container = styled.div`
 export const Card = styled.div`
   position: relative;
   
-  width: 250px;
-  height: 300px;
+  width: 223px;
+  height: 223px;
   
   border: 2px solid #606060;
   border-radius: 8px;
