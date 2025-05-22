@@ -17,15 +17,15 @@ export function Cards() {
     }
     fetchCharacters()
   }, [])
-  
+
   return (
     <>
       <Container>
         {characters.map(characters => (
           <Card
             key={characters.id}>
-            <Image 
-              src={characters.image} 
+            <Image
+              src={characters.image}
             />
             <Text>
               <Name>{characters.name}</Name>

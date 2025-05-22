@@ -5,12 +5,9 @@ import { Search } from '../../components/Search'
 export function Home() {
 
   return (
-    <>
-
-      <Content>
-        <Header />
-        <Search />
-      </Content>
-    </>
+    <Content>
+      <Header />
+      <Search />
+    </Content>
   )
 }

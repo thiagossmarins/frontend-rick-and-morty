@@ -1,4 +1,4 @@
-import {  StyledLink} from './style'
+import { StyledLink } from './style'
 
 interface ButtonProps {
   text: string
@@ -7,6 +7,6 @@ interface ButtonProps {
 
 export function Button({ text, link }: ButtonProps) {
   return (
-      <StyledLink to={link}>{text}</StyledLink>
+    <StyledLink to={link}>{text}</StyledLink>
   )
 }

@@ -5,11 +5,9 @@ import { Search } from '../../components/Search'
 export function Characters() {
 
   return (
-    <>
-      <Content>
-        <Header />
-        <Search />
-      </Content>
-    </>
+    <Content>
+      <Header />
+      <Search />
+    </Content>
   )
 }
