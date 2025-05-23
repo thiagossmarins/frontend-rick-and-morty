@@ -6,7 +6,7 @@ const api = axios.create({
 })
 
 export async function getAllCharacters(): Promise<Character[]> {
-  const response = await api.get('/characters/')
+  const response = await api.get('/characters/?page=1')
   return response.data.data.characters
 }
 

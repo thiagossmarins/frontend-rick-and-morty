@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     background-image: url(${background});
     background-color: var(--color-primary);
-    background-size: contain;
+    background-size:  100% auto;
     background-repeat: no-repeat;
     background-position: top center;
   }

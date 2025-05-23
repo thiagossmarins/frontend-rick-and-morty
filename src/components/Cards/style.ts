@@ -5,7 +5,7 @@ interface CharactersStatus {
 }
 
 export const Container = styled.div`
-  max-width: 65%;
+  max-width: 50%;
   
   display: flex;
   justify-content: center;
