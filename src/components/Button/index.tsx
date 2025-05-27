@@ -2,11 +2,10 @@ import { StyledLink } from './style'
 
 interface ButtonProps {
   text: string
-  link: string
+  link?: string
+  onClick?: () => void
 }
 
-export function Button({ text, link }: ButtonProps) {
-  return (
-    <StyledLink to={link}>{text}</StyledLink>
-  )
+export function Button({ text, link, onClick }: ButtonProps) {
+  return <StyledLink to={link ?? "#"} onClick={onClick}>{text}</StyledLink>
 }

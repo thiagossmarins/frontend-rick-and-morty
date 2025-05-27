@@ -1,5 +1,5 @@
 import { LoadingContainer, Image, Text } from './style'
-import LoadingImage from '../../assets/img/card-loading-rick-and-morty.png'
+import LoadingImage from '../../assets/img/loading.png'
 
 export function Loading() {
   return (

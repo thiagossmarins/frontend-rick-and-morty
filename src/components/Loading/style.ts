@@ -14,7 +14,7 @@ export const LoadingContainer = styled.div`
     background: #00000080;
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(80px); 
-    z-index: 9999;
+    z-index: 1;
 `;
 
 export const Image = styled.img`
