@@ -4,7 +4,7 @@ import { getAllCharacters, getCharacterById } from '../../services/api'
 import * as S from './style'
 import { Loading } from '../Loading'
 import { Modal } from '../Modal'
-import { getGender } from '../../utils/functions'
+import { CharacterDetails } from '../CharacterDetails'
 
 export function Cards() {
     const [characters, setCharacters] = useState<Characters[]>([])
@@ -59,29 +59,7 @@ export function Cards() {
             </S.Container>
            {modalOpen && selectedCharacter && (
             <Modal onClose={() => setModalOpen(false)}>
-                <S.ImageBackground image={selectedCharacter.image} />
-                <S.Box>
-                    <S.Content>
-                        <S.PreTitle>About</S.PreTitle>
-                        <S.SubTitle>{selectedCharacter.name} is a {selectedCharacter.gender} {selectedCharacter.species}. {getGender(selectedCharacter.gender)} is {selectedCharacter.status} and well. Last seen in {selectedCharacter.last_seen}</S.SubTitle>
-                    </S.Content>
-
-                    <S.Content>
-                        <S.PreTitle>Origin</S.PreTitle>
-                        <S.Planet>Planet</S.Planet>
-                        <S.Title>{selectedCharacter.origin?.name || 'Unknown'}</S.Title>
-                        <S.SubTitle>Replacement Dimension</S.SubTitle>
-                        <S.Residents>residents</S.Residents>
-                    </S.Content>
-                    
-                    <S.Content>
-                        <S.PreTitle>Location</S.PreTitle>
-                        <S.Planet>Planet</S.Planet>
-                        <S.Title>{selectedCharacter.location?.name || 'Unknown'}</S.Title>
-                        <S.SubTitle>Replacement Dimension</S.SubTitle>
-                        <S.Residents>residents</S.Residents>
-                    </S.Content>
-                </S.Box>
+                <CharacterDetails character={selectedCharacter} />
             </Modal>
             )}
         </>
