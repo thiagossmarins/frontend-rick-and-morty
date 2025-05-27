@@ -1,5 +1,5 @@
 import { Container } from './style'
-import logoRickAndMorty from "../../assets/img/logo-rick-and-morty.png"
+import logoRickAndMorty from "../../assets/img/logo.png"
 
 export function Header() {
   return (

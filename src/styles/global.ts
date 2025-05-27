@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import background from '../assets/img/background-rick-and-morty.png';
+import background from '../assets/img/background.png';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
