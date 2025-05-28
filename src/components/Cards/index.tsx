@@ -1,19 +1,26 @@
 import { useState, useEffect } from 'react'
-import { Characters, CharacterID } from '../../types/getAllCharacters'
+import { Character, CharacterID } from '../../types/getAllCharacters'
 import { getAllCharacters, getCharacterById } from '../../services/api'
 import * as S from './style'
 import { Loading } from '../Loading'
 import { Modal } from '../Modal'
 import { CharacterDetails } from '../CharacterDetails'
+import { useLocation } from 'react-router-dom'
 
 export function Cards() {
-    const [characters, setCharacters] = useState<Characters[]>([])
+    const [characters, setCharacters] = useState<Character[]>([])
     const [loading, setLoading] = useState(true)
     const [modalOpen, setModalOpen] = useState(false)
-    const [selectedCharacter, setSelectedCharacter] = useState<CharacterID | null>(null)
+    const [selectedCharacter, setSelectedCharacter] = useState<CharacterID>()
+    const location = useLocation()
 
     useEffect(() => {
-        getAllCharacters()
+        const params = new URLSearchParams(location.search)
+        const page = Number(params.get('page')) || 1
+         const name = params.get('name') || ''
+
+         setLoading(true)
+        getAllCharacters(page, name)
             .then(data => {
                 setCharacters(data)
                 setLoading(false)
@@ -22,7 +29,7 @@ export function Cards() {
                 console.error('Erro ao buscar personagens:', error)
                 setLoading(false)
             })
-    }, [])
+    }, [location.search])
 
     const handleCardClick = async (id: number) => {
         setLoading(true)
