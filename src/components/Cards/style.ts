@@ -13,7 +13,9 @@ export const Container = styled.div`
   padding-top: 120px;
 `;
 
-export const Card = styled.div`
+export const Card = styled.div<{ modal?: boolean }>`
+  width: ${({ modal }) => (modal ? '300px' : '200px')};
+  height: ${({ modal }) => (modal ? '400px' : '250px')};
   position: relative;
   width: 223px;
   height: 223px;

@@ -89,3 +89,56 @@ export const ImageBackground = styled.div<{ image: string }>`
     border-bottom-left-radius: 8px;
   }
 `;
+
+export const Card = styled.div<{ modal?: boolean }>`
+  width: ${({ modal }) => (modal ? '300px' : '200px')};
+  height: ${({ modal }) => (modal ? '400px' : '250px')};
+  position: relative;
+  width: 223px;
+  height: 223px;
+  border: 2px solid #606060;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  transition: .3s ease-in-out;
+  &:hover {
+    border: 2px solid var(--color-secondary);
+    box-shadow:
+      0px 0px 5px 4px var(--color-secondary),
+      0px 0px 0px 3px var(--color-secondary),
+  }
+`;
+
+export const Image = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: -1;
+
+`;
+
+export const Text = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px);
+  padding: 10px;
+  z-index: 1;
+`;
+
+export const Name = styled.h2`
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+`;
+
+export const Species = styled.p`
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #fff;
+`;

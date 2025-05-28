@@ -1,4 +1,4 @@
-export interface Characters {
+export interface Character {
   id: number;
   name: string;
   image: string;
@@ -6,7 +6,7 @@ export interface Characters {
   status: string;
 }
 
-export interface CharacterID extends Characters {
+export interface CharacterID extends Character {
   gender: string;
   last_seen: string;
   location: {
@@ -27,7 +27,7 @@ export interface CharacterID extends Characters {
 }
 
 export interface CharactersData {
-  characters: Characters[];
+  characters: Character[];
   current_page: number;
   total_pages: number;
 }
