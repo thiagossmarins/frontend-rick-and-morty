@@ -11,7 +11,7 @@ export function Search({ onSearch }: { onSearch?: (query: string) => void }) {
         if (onSearch) {
             onSearch(query);
         }
-        navigate(`?page=1&name=${encodeURIComponent(query)}`);
+        navigate(`/characters/?page=1&name=${encodeURIComponent(query)}`);
     }
 
     return (

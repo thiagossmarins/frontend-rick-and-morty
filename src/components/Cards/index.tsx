@@ -17,9 +17,9 @@ export function Cards() {
     useEffect(() => {
         const params = new URLSearchParams(location.search)
         const page = Number(params.get('page')) || 1
-         const name = params.get('name') || ''
+        const name = params.get('name') || ''
 
-         setLoading(true)
+        setLoading(true)
         getAllCharacters(page, name)
             .then(data => {
                 setCharacters(data)
@@ -64,10 +64,10 @@ export function Cards() {
                     </S.Card>
                 ))}
             </S.Container>
-           {modalOpen && selectedCharacter && (
-            <Modal onClose={() => setModalOpen(false)}>
-                <CharacterDetails character={selectedCharacter} />
-            </Modal>
+            {modalOpen && selectedCharacter && (
+                <Modal onClose={() => setModalOpen(false)}>
+                    <CharacterDetails character={selectedCharacter} />
+                </Modal>
             )}
         </>
     )
