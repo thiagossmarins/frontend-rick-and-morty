@@ -1,6 +1,7 @@
 import { Overlay, ModalContainer, ButtonWrapper } from './style'
 import { Button } from '../Button'
 
+
 interface ModalProps {
     onClose: () => void
     children: React.ReactNode
