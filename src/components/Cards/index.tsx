@@ -66,6 +66,17 @@ export function Cards() {
             </S.Container>
             {modalOpen && selectedCharacter && (
                 <Modal onClose={() => setModalOpen(false)}>
+                     <S.Card modal>
+                        <S.Image
+                            src={selectedCharacter.image}
+                            status={selectedCharacter.status}
+                            modal={true}
+                        />
+                        <S.Text>
+                            <S.Name>{selectedCharacter.name}</S.Name>
+                            <S.Species>{selectedCharacter.species}</S.Species>
+                        </S.Text>
+                    </S.Card>
                     <CharacterDetails character={selectedCharacter} />
                 </Modal>
             )}
