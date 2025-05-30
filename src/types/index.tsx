@@ -10,20 +10,20 @@ export interface CharacterID extends Character {
   gender: string;
   last_seen: string;
   location: {
-    dimension: string | null;
-    id: number | null;
-    name: string | null;
-    residents_count: string | null;
-    type: string | null;
-  } | null;
+    dimension: string;
+    id: number;
+    name: string;
+    residents_count: string;
+    type: string;
+  };
   name: string;
   origin: {
-    dimension: string | null;
-    id: number | null;
-    name: string | null;
-    residents_count: string | null;
-    type: string | null;
-  } | null;
+    dimension: string;
+    id: number;
+    name: string;
+    residents_count: string;
+    type: string;
+  };
 }
 
 export interface CharactersData {

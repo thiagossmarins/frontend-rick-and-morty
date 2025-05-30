@@ -1,18 +1,22 @@
 import { useState, useEffect } from 'react'
-import { Character, CharacterID } from '../../types/getAllCharacters'
+import { Character, CharacterID } from '../../types'
 import { getAllCharacters, getCharacterById } from '../../services/api'
 import * as S from './style'
 import { Loading } from '../../pages/Loading'
 import { Modal } from '../Modal'
 import { CharacterDetails } from '../CharacterDetails'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { Pagination } from '../Pagination'
 
 export function Cards() {
     const [characters, setCharacters] = useState<Character[]>([])
+    const [currentPage, setCurrentPage] = useState(1)
+    const [totalPages, setTotalPages] = useState(1)
     const [loading, setLoading] = useState(true)
     const [modalOpen, setModalOpen] = useState(false)
     const [selectedCharacter, setSelectedCharacter] = useState<CharacterID>()
     const location = useLocation()
+    const navigate = useNavigate()
 
     useEffect(() => {
         const params = new URLSearchParams(location.search)
@@ -22,7 +26,9 @@ export function Cards() {
         setLoading(true)
         getAllCharacters(page, name)
             .then(data => {
-                setCharacters(data)
+                setCharacters(data.characters)
+                setCurrentPage(data.current_page)
+                setTotalPages(data.total_pages)
                 setLoading(false)
             })
             .catch(error => {
@@ -42,6 +48,12 @@ export function Cards() {
         } finally {
             setLoading(false)
         }
+    }
+
+    const handlePageChange = (page: number) => {
+        const params = new URLSearchParams(location.search)
+        params.set('page', String(page))
+        navigate(`?${params.toString()}`)  // <- isso dispara a atualização do location
     }
 
     if (loading) {
@@ -64,9 +76,14 @@ export function Cards() {
                     </S.Card>
                 ))}
             </S.Container>
+            <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+            />
             {modalOpen && selectedCharacter && (
                 <Modal onClose={() => setModalOpen(false)}>
-                     <S.Card modal>
+                    <S.Card modal>
                         <S.Image
                             src={selectedCharacter.image}
                             status={selectedCharacter.status}

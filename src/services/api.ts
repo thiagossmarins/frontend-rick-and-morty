@@ -1,15 +1,15 @@
 import axios from 'axios'
-import { Character, CharacterID } from '../types/getAllCharacters'
+import { CharactersData, CharacterID } from '../types'
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 })
 
-export async function getAllCharacters(page = 1, name = ""): Promise<Character[]> {
+export async function getAllCharacters(page = 1, name = ""): Promise<CharactersData> {
   const response = await api.get('/characters/', {
     params: { page, name }
-  })
-  return response.data.data.characters
+  });
+  return response.data.data
 }
 
 export async function getCharacterById(id: number): Promise<CharacterID> {

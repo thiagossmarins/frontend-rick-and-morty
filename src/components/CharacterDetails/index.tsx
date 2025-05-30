@@ -1,5 +1,5 @@
 import * as S from './styles';
-import { CharacterID } from '../../types/getAllCharacters'
+import { CharacterID } from '../../types'
 import { getGender } from '../../utils/functions'
 
 interface CharacterDetailsProps {

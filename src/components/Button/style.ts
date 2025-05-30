@@ -8,7 +8,7 @@ export const Btn = styled.button`
     text-align: center;
     padding: 10px;
     color: #fff;
-    font-size: 16px;
+    font-size: var(--font-size-default);
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;

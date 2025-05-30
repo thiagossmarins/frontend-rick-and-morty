@@ -15,8 +15,8 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div<{ modal?: boolean }>`
-  width: ${({ modal }) => (modal ? '400px' : '223px')};
-  height: ${({ modal }) => (modal ? '650px' : '223px')};
+  width: ${({ modal }) => (modal ? '400px' : '218px')};
+  height: ${({ modal }) => (modal ? '650px' : '218px')};
     ${({ modal }) => modal ? `
     top: 50%;
     left: -10%;
