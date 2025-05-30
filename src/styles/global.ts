@@ -6,14 +6,17 @@ export const GlobalStyle = createGlobalStyle`
     --color-primary: #1E1E1E;
     --color-secondary: #CBD736;
     --color-background: #000000;
+    --color-number: #909090;
     --color-text: #fff;
 
-    --font-size-small: 0.75rem;
-    --font-size-default: 1.125rem;
-    --font-size-name: 1.25rem;
-    --font-size-specie: 0.75rem;
-    --font-size-medium: 0.8rem;
-    --font-size-large: 1.75rem;
+    --font-size-small: 0.75rem; // 12px
+    --font-size-medium: 0.8rem; //13px
+    --font-size-planet: 0.875rem; // 14px
+    --font-size-default: 1rem; // 16px
+    --font-size-subtitle: 1.125rem; // 18px
+    --font-size-name: 1.25rem; // 20px
+    --font-size-loading: 1.5rem; // 25px
+    --font-size-large: 1.75rem; // 28px
   }
 
   * {

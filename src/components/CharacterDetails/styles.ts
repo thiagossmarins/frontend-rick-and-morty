@@ -10,7 +10,7 @@ export const Content = styled.div`
 
 export const PreTitle = styled.h4`
   font-weight: 400;
-  font-size: 13px;
+  font-size: var(--font-size-medium);
   line-height: 100%;
   letter-spacing: 65%;
   color: var(--color-secondary);
@@ -20,7 +20,7 @@ export const PreTitle = styled.h4`
 
 export const Planet = styled.p`
   font-weight: 400;
-  font-size: 14px;
+  font-size: var(--font-size-planet);
   line-height: 100%;
   letter-spacing: 0%;
   color: #8C8C8C;
@@ -28,7 +28,7 @@ export const Planet = styled.p`
 
 export const Title = styled.h1`
   font-weight: 400;
-  font-size: 28px;
+  font-size: var(--font-size-large);
   line-height: 100%;
   letter-spacing: 0%;
   color: #FFFFFF;
@@ -36,7 +36,7 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h3`
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--font-size-subtitle);
   line-height: 100%;
   letter-spacing: 0%;
   margin-bottom: 8px;
@@ -46,7 +46,7 @@ export const SubTitle = styled.h3`
 
 export const Residents = styled.p`
   font-weight: 400;
-  font-size: 14px;
+  font-size: var(--font-size-planet);
   line-height: 100%;
   letter-spacing: 0%;
   color: #8C8C8C;

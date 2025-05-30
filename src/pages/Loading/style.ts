@@ -24,7 +24,7 @@ export const Image = styled.img`
 
 export const Text = styled.p`
     font-weight: 400;
-    font-size: 24px;
+    font-size: var(--font-size-loading);
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
