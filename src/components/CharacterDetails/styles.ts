@@ -29,7 +29,7 @@ export const Planet = styled.p`
 export const Title = styled.h1`
   font-weight: 400;
   font-size: var(--font-size-large);
-  line-height: 100%;
+  line-height: 120%;
   letter-spacing: 0%;
   color: #FFFFFF;
 `;
@@ -74,8 +74,8 @@ export const ImageBackground = styled.div<{ image: string }>`
   background-size: cover;
   background-position: center;
   z-index: -1;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 
   &::after {
     content: "";
@@ -85,8 +85,8 @@ export const ImageBackground = styled.div<{ image: string }>`
     -webkit-backdrop-filter: blur(30px);
     background:rgba(0, 0, 0, 0.5);
     pointer-events: none;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
   }
 `;
 
