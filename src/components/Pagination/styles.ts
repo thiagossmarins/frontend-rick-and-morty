@@ -8,14 +8,16 @@ export const PaginationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: clamp(1rem, 2.5vw, 5rem);
   padding: 100px 0;
 `;
 
 export const PageButton = styled.button`
+  display: flex;
+  align-items: center;
   font-size: var(--font-size-name);
   color: var(--color-text);
-  padding: 0.5rem 1rem;
+  padding: 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -28,7 +30,21 @@ export const PageButton = styled.button`
   }
 `;
 
-export const Number = styled.p<NumberProps>`
+export const Number = styled.button<NumberProps>`
+  background: none;
+  border: none;
+  cursor: pointer;
   color: ${({ active }) => active ? 'var(--color-secondary)' : 'var(--color-number)'};
   font-size: var(--font-size-name);
+`;
+
+export const PrevButton = styled.img`
+  width: 10px;
+  height: 20px;
+  transform: rotate(180deg);
+`;
+
+export const NextButton = styled.img`
+  width: 10px;
+  height: 20px;
 `;

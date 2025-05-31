@@ -1,4 +1,5 @@
-import {PaginationContainer, PageButton, Number} from './styles'
+import {PaginationContainer, PageButton, Number, PrevButton, NextButton} from './styles'
+import PrevIcon from '../../assets/img/next-prev.svg';
 
 interface PaginationProps {
     currentPage: number;
@@ -38,13 +39,13 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
     return (
         <PaginationContainer>
             <PageButton onClick={handlePrev} disabled={currentPage === 1}>
-                &lt;
+                <PrevButton src={PrevIcon} />
             </PageButton>
 
             {renderPageNumbers()}
 
             <PageButton onClick={handleNext} disabled={currentPage === totalPages}>
-                &gt;
+                <NextButton src={PrevIcon} />
             </PageButton>
         </PaginationContainer>
     );
