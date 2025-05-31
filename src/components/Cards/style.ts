@@ -46,6 +46,12 @@ export const Card = styled.div<{ modal?: boolean }>`
       height: 300px;
     }
 
+    @media ${device.mobile} {
+      top: -5%;
+      width: 220px;
+      height: 220px;
+    }
+
     ` : `
     &:hover {
       border: none;

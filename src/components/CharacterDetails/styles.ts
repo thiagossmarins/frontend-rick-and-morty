@@ -8,17 +8,25 @@ export const Box = styled.div`
     margin-top: 75px;
     padding: 20px;
   }
+
+  @media ${device.mobile} {
+    margin-top: 45px;
+  }
 `;
 
 export const Content = styled.div`
   padding-bottom: 63px;
+  
+  @media ${device.mobile} {
+    padding-bottom: 41px;
+  }
 `;
 
 export const PreTitle = styled.h4`
   font-weight: 400;
   font-size: var(--font-size-medium);
   line-height: 100%;
-  letter-spacing: 65%;
+  letter-spacing: 10px;
   color: var(--color-secondary);
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -87,6 +95,8 @@ export const ImageBackground = styled.div<{ image: string }>`
     top: 0;
     width: 100%;
     height: 18%; 
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 12px;
   }
 
   &::after {
@@ -99,6 +109,11 @@ export const ImageBackground = styled.div<{ image: string }>`
     pointer-events: none;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+
+    @media ${device.ipad} {
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 12px;
+    }
   }
 `;
 

@@ -34,6 +34,7 @@ export const ModalContainer = styled.div`
 
   @media ${device.ipad} {
     grid-template-columns: 1fr;
+    width: 90%;
   }
 
 `;
