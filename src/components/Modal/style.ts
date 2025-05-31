@@ -31,6 +31,11 @@ export const ModalContainer = styled.div`
   @media ${device.laptop} {
     height: 85%;
   }
+
+  @media ${device.ipad} {
+    grid-template-columns: 1fr;
+  }
+
 `;
 
 export const CharacterInfo = styled.p`

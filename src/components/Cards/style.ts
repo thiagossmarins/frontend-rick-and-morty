@@ -13,6 +13,14 @@ export const Container = styled.div`
   flex-wrap: wrap;
   gap: 25px;
   padding-top: 120px;
+
+  @media ${device.laptop} {
+    max-width: 70%;
+  }
+  
+  @media ${device.mobile} {
+    max-width: 100%;
+  }
 `;
 
 export const Card = styled.div<{ modal?: boolean }>`
@@ -28,6 +36,14 @@ export const Card = styled.div<{ modal?: boolean }>`
       left: -5%;
       width: 350px;
       height: 500px;
+    }
+
+    @media ${device.ipad} {
+      left: 50%;
+      transform: translateX(-50%);
+      top: -12%;
+      width: 300px;
+      height: 300px;
     }
 
     ` : `

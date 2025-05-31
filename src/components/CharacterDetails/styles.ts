@@ -1,7 +1,13 @@
 import styled from "styled-components";
+import { device } from "../../styles/device";
 
 export const Box = styled.div`
   padding: 72px;
+
+  @media ${device.ipad} {
+    margin-top: 75px;
+    padding: 20px;
+  }
 `;
 
 export const Content = styled.div`
@@ -76,6 +82,12 @@ export const ImageBackground = styled.div<{ image: string }>`
   z-index: -1;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
+
+  @media ${device.ipad} {
+    top: 0;
+    width: 100%;
+    height: 18%; 
+  }
 
   &::after {
     content: "";

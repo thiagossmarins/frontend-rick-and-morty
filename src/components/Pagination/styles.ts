@@ -8,7 +8,7 @@ export const PaginationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem, 2.5vw, 5rem);
+  gap: clamp(1.25rem, 2.5vw, 5rem);
   padding: 100px 0;
 `;
 
