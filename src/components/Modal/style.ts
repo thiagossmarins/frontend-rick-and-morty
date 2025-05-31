@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/device";
 
 export const Overlay = styled.div`
   position: fixed;
@@ -15,15 +16,21 @@ export const Overlay = styled.div`
 
 export const ModalContainer = styled.div`
   display: grid;
-  grid-template-columns: 359px 1fr;
+  grid-template-columns: minmax(280px, 359px) 1fr;
   position: relative;
-  width: 1034px;
-  height: 799px;
+  max-width: 1034px;
+  width: 80%;
+  height: 100%;
+  max-height: 800px;
   background: #000;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 79px 0px #000000;
   border-radius: 12px;
   padding: 20px;
   z-index: -1;
+
+  @media ${device.laptop} {
+    height: 85%;
+  }
 `;
 
 export const CharacterInfo = styled.p`

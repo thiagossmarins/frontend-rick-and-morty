@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/device";
 
 interface CharactersStatus {
     status: string;
@@ -22,6 +23,13 @@ export const Card = styled.div<{ modal?: boolean }>`
     left: -10%;
     transform: translateY(-50%);
     position: absolute !important;
+
+    @media ${device.laptop} {
+      left: -5%;
+      width: 350px;
+      height: 500px;
+    }
+
     ` : `
     &:hover {
       border: none;
