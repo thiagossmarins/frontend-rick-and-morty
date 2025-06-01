@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "../../styles/device";
 
 export const Btn = styled.button`
     display: inline-block;
@@ -13,10 +12,4 @@ export const Btn = styled.button`
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-
-    @media ${device.mobile} {
-        position: absolute;
-        top: -7%;
-        left: 0;
-    }
 `

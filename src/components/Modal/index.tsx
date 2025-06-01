@@ -12,7 +12,7 @@ export function Modal({ onClose, children }: ModalProps) {
         <Overlay>
             <ModalContainer>
                 <ButtonWrapper>
-                    <Button onClick={onClose} text='Close' />
+                    <Button onClick={onClose} text='Close' className='modal-button' />
                 </ButtonWrapper>
                 {children}
             </ModalContainer>
