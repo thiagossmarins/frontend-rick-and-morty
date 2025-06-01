@@ -56,4 +56,12 @@ export const Container = styled.div`
 
 export const ButtonWrapper = styled.div`
   padding-bottom: 20px;
+
+  .modal-button {
+    @media ${device.mobile} {
+      position: absolute;
+      top: -7%;
+      left: 0;
+    }
+  }
 `;
