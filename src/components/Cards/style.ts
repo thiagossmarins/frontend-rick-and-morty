@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { device } from "../../styles/device";
 
 interface CharactersStatus {
-    status: string;
-    modal?: boolean;
+  status: string;
+  modal?: boolean;
 }
 
 export const Container = styled.div`
@@ -18,7 +18,7 @@ export const Container = styled.div`
     max-width: 70%;
   }
   
-  @media ${device.mobile} {
+  @media ${device.mobileM} {
     max-width: 100%;
   }
 `;
@@ -26,6 +26,11 @@ export const Container = styled.div`
 export const Card = styled.div<{ modal?: boolean }>`
   width: ${({ modal }) => (modal ? '400px' : '218px')};
   height: ${({ modal }) => (modal ? '650px' : '218px')};
+  
+  @media ${device.mobileM} {
+    width: 254px;
+  }
+
     ${({ modal }) => modal ? `
     top: 50%;
     left: -10%;
@@ -46,10 +51,16 @@ export const Card = styled.div<{ modal?: boolean }>`
       height: 300px;
     }
 
-    @media ${device.mobile} {
-      top: -5%;
+    @media ${device.mobileM} {
+      top: -7%;
       width: 220px;
       height: 220px;
+    }
+
+    @media ${device.mobileS} {
+      top: -10%;
+      width: 178px;
+      height: 178px;
     }
 
     ` : `

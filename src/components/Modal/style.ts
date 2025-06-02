@@ -37,6 +37,10 @@ export const ModalContainer = styled.div`
     width: 90%;
   }
 
+  @media ${device.mobileS} {
+    margin-bottom: -10%;
+  }
+
 `;
 
 export const CharacterInfo = styled.p`
@@ -58,10 +62,14 @@ export const ButtonWrapper = styled.div`
   padding-bottom: 20px;
 
   .modal-button {
-    @media ${device.mobile} {
+    @media ${device.mobileM} {
       position: absolute;
       top: -7%;
       left: 0;
+    }
+
+    @media ${device.mobileS} {
+      top: -10%;
     }
   }
 `;

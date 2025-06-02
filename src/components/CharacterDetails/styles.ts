@@ -9,15 +9,19 @@ export const Box = styled.div`
     padding: 20px;
   }
 
-  @media ${device.mobile} {
+  @media ${device.mobileM} {
     margin-top: 45px;
+  }
+
+  @media ${device.mobileS} {
+    margin-top: 75px;
   }
 `;
 
 export const Content = styled.div`
   padding-bottom: 63px;
   
-  @media ${device.mobile} {
+  @media ${device.mobileM} {
     padding-bottom: 41px;
   }
 `;
@@ -42,7 +46,7 @@ export const Planet = styled.p`
 
 export const Title = styled.h1`
   font-weight: 400;
-  font-size: var(--font-size-large);
+  font-size: clamp(var(--font-size-name), 5vw,var(--font-size-large));
   line-height: 120%;
   letter-spacing: 0%;
   color: #FFFFFF;
@@ -97,6 +101,10 @@ export const ImageBackground = styled.div<{ image: string }>`
     height: 18%; 
     border-bottom-left-radius: 0px;
     border-top-right-radius: 12px;
+  }
+
+  @media ${device.mobileM} {
+    height: 10%; 
   }
 
   &::after {
