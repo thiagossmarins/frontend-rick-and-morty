@@ -6,6 +6,11 @@ export const Center = styled.div`
     align-items: center;
     gap: 16px;
     margin-top: 75px;
+
+    form {
+      display: flex;
+      gap: 16px;
+    }
 `
 
 export const SearchInput = styled.input`
