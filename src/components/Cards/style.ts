@@ -109,10 +109,21 @@ export const Text = styled.div`
   z-index: 1;
 `;
 
-export const Name = styled.h2`
+export const Name = styled.h2<{ modal?: boolean }>`
   font-size: 1.4rem;
   font-weight: 700;
   color: #fff;
+  
+  ${({ modal }) => modal ? `
+    white-space: normal;
+    overflow: visible;
+    max-width: 100%;
+  ` : `
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  `}
 `;
 
 export const Species = styled.p`

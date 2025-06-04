@@ -70,7 +70,7 @@ export function Cards() {
                             status={character.status}
                         />
                         <S.Text>
-                            <S.Name>{character.name}</S.Name>
+                            <S.Name modal={false}>{character.name}</S.Name>
                             <S.Species>{character.species}</S.Species>
                         </S.Text>
                     </S.Card>
@@ -90,7 +90,7 @@ export function Cards() {
                             modal={true}
                         />
                         <S.Text>
-                            <S.Name>{selectedCharacter.name}</S.Name>
+                            <S.Name modal={true}>{selectedCharacter.name}</S.Name>
                             <S.Species>{selectedCharacter.species}</S.Species>
                         </S.Text>
                     </S.Card>
